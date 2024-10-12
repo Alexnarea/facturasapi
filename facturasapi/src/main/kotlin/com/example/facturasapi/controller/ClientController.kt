@@ -32,5 +32,8 @@ class ClientController {
     fun update(@RequestBody client:Client): ResponseEntity<Client>{
         return  ResponseEntity( clientService.update(client), HttpStatus.OK)
    }
-
+    @PatchMapping
+    fun updateName(@RequestBody client:Client): ResponseEntity<Client>{
+        return  ResponseEntity( clientService.updateName(client), HttpStatus.OK)
+    }
 }
